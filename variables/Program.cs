@@ -7,6 +7,11 @@ namespace Variables
         // Metodo Principal de la clase, se ejecuta primero que todo en la clase del momento
         static void Main(string[] args)
         {
+
+            /* Impresión de un argumento de la clase principal */
+
+            Console.WriteLine(args[0]);
+
             /* Generico */
 
             // Se usa para declarar variables cuando el tipo de datos se infiere automáticamente por el compilador en función del valor asignado.
@@ -64,6 +69,63 @@ namespace Variables
             Console.WriteLine(myLong);
             Console.WriteLine(myFloat);
             Console.WriteLine(myDouble);
+
+            /* Arreglos */
+
+            // Declaración e inicialización de un array de enteros
+            bool[] myArrayBooleans = [true, true, false];
+
+            // Declaración e inicialización de un array de enteros
+            string[] myArrayStrings = ["a", "b", "c", "d"];
+
+            // Declaración e inicialización de un array de enteros
+            int[] myArrayInts = [10, 20, 30, 40, 50];
+
+            Console.WriteLine($"Array de booleans {myArrayBooleans.Length}");
+            Console.WriteLine($"Array de integers {myArrayStrings.Length}");
+            Console.WriteLine($"Array de strings {myArrayInts.Length}");
+
+
+            /* Emulación de un Objeto */
+
+            Usuario usuario = new()
+            {
+                Id = 123,
+                Nombre = "John Doe",
+                Email = "johndoe@mail.com"
+            };
+
+            Console.WriteLine($"Id: {usuario.Id}, Nombre: {usuario.Nombre}, Email: {usuario.Email}");
+
+            /* Arreglo de objetos */
+
+            Usuario[] usuarios = [
+                new Usuario
+                {
+                    Id = 123,
+                    Nombre = "John Doe",
+                    Email = "johndoe@mail.com"
+                },
+                new Usuario
+                {
+                    Id = 456,
+                    Nombre = "Jane Smith",
+                    Email = "janesmith@mail.com"
+                },
+            ];
+
+            Console.WriteLine($"Id: {usuarios[0].Id}, Nombre: {usuarios[0].Nombre}, Email: {usuarios[0].Email}");
+            Console.WriteLine($"Id: {usuarios[1].Id}, Nombre: {usuarios[1].Nombre}, Email: {usuarios[1].Email}");
+
         }
     }
+
+    // Aqui se declara la clase que sera la estructura del arreglo para el elemplo
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public required string Nombre { get; set; }
+        public required string Email { get; set; }
+    }
+
 }
