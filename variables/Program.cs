@@ -5,13 +5,8 @@ namespace Variables
     class MainClass
     {
         // Metodo Principal de la clase, se ejecuta primero que todo en la clase del momento
-        static void Main(string[] args)
+        static void Main()
         {
-
-            /* Impresión de un argumento de la clase principal */
-
-            Console.WriteLine(args[0]);
-
             /* Generico */
 
             // Se usa para declarar variables cuando el tipo de datos se infiere automáticamente por el compilador en función del valor asignado.
@@ -57,13 +52,13 @@ namespace Variables
             // Su tamaño es de 8 bytes y puede almacenar valores en el rango de -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807.
             long myLong = 1000000000; // 10000000000...
 
+            // Almacena números de punto flotante de doble precisión. 
+            // Utiliza 8 bytes y puede almacenar valores en el rango de ±5.0 x 10^-324 a ±1.7 x 10^308 con una precisión de 15-16 dígitos decimales.
+            double myDouble = 1.11111111111111111; // 1.111111111111...
+
             // Representa números de punto flotante de precisión simple. 
             // Ocupa 4 bytes y puede almacenar valores en el rango de ±1.5 x 10^-45 a ±3.4 x 10^38 con una precisión de 7 dígitos decimales
             float myFloat = 1.11111F; // 1.111111...F
-
-            // Almacena números de punto flotante de doble precisión. 
-            // Utiliza 8 bytes y puede almacenar valores en el rango de ±5.0 x 10^-324 a ±1.7 x 10^308 con una precisión de 15-16 dígitos decimales.
-            double myDouble = 1.11111111111111111F; // 1.111111111111...F
 
             Console.WriteLine(myInt);
             Console.WriteLine(myLong);
@@ -84,7 +79,6 @@ namespace Variables
             Console.WriteLine($"Array de booleans {myArrayBooleans.Length}");
             Console.WriteLine($"Array de integers {myArrayStrings.Length}");
             Console.WriteLine($"Array de strings {myArrayInts.Length}");
-
 
             /* Emulación de un Objeto */
 
