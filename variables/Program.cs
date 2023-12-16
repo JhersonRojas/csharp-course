@@ -65,8 +65,17 @@ namespace Variables
             Console.WriteLine(myFloat);
             Console.WriteLine(myDouble);
 
+            /* Listas */
+            
+            // Son una colección de elementos los cuales pueden ser
+            // accedidos mediante un indice para obtener su valor
+            var names = new List<string> { "Juan", "Ana", "Felipe" };
+            
             /* Arreglos */
 
+            // Similares a las listas, contienen valores asignados
+            // dependiendo del funcionamiento a cumplir 
+            
             // Declaración e inicialización de un array de enteros
             bool[] myArrayBooleans = [true, true, false];
 
