@@ -16,6 +16,16 @@ namespace Variables
             Console.WriteLine(myVarInt);
             Console.WriteLine(myVarString);
 
+            /* Constantes */
+
+            // Se usa para declarar un valor que no cambiara
+            // Pero el tipo de este valor debe ser explicito
+            const string MyStringConst = "Hello const";
+            const int MyIntConst = 1234;
+
+            Console.WriteLine(MyStringConst);
+            Console.WriteLine(MyIntConst);
+
             /* Booleanos */
 
             // Almacena valores booleanos, es decir, true o false.
@@ -66,16 +76,16 @@ namespace Variables
             Console.WriteLine(myDouble);
 
             /* Listas */
-            
+
             // Son una colección de elementos los cuales pueden ser
             // accedidos mediante un indice para obtener su valor
             var names = new List<string> { "Juan", "Ana", "Felipe" };
-            
+
             /* Arreglos */
 
             // Similares a las listas, contienen valores asignados
             // dependiendo del funcionamiento a cumplir 
-            
+
             // Declaración e inicialización de un array de enteros
             bool[] myArrayBooleans = [true, true, false];
 
@@ -89,7 +99,16 @@ namespace Variables
             Console.WriteLine($"Array de integers {myArrayStrings.Length}");
             Console.WriteLine($"Array de strings {myArrayInts.Length}");
 
-            /* Emulación de un Objeto */
+            /* Tuplas  */
+
+            // Declaración de una tupla con nombres
+            var otraTupla = (numero: 456, mensaje: "Hola de nuevo");
+
+            // Acceso a los elementos de la tupla por nombre
+            Console.WriteLine(otraTupla.numero); // salida: 456
+            Console.WriteLine(otraTupla.mensaje); // salida: Hola de nuevo
+
+            /* Emulación de un objeto */
 
             Usuario usuario = new()
             {
@@ -123,8 +142,8 @@ namespace Variables
         }
     }
 
-    // Aqui se declara la clase que sera la estructura del arreglo para el elemplo
-    public class Usuario
+    // Aqui se declara la clase (struct) que sera la estructura del arreglo para el elemplo
+    public struct Usuario
     {
         public int Id { get; set; }
         public required string Nombre { get; set; }
